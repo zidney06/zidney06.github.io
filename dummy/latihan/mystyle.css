@@ -1,0 +1,219 @@
+/*development style*/
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.borderedR{ 
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+.borderedG{
+  border: 1px solid green;
+  box-sizing: border-box;
+}
+.borderedB{
+  border: 1px solid blue;
+  box-sizing: border-box;
+}
+/*<----------->*/
+input[type="radio"]{
+  display:none;
+}
+
+.mytabs {
+  display: flex;
+  position: relative;
+  padding: 0;
+  border-radius: 1rem;
+  background-color: #fff;
+}
+/*selector for all element under .tabs*/
+.mytabs * {
+  z-index: 2;
+}
+
+.mytab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  
+  font-size: 1.25rem;
+  font-weight: 500;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: color 0.15s ease-in;
+}
+
+.mynotification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.75rem;
+  border-radius: 50%;
+  background-color: gray;
+  transition: 0.25s ease-in;
+}
+
+input[type=radio]:checked + label {
+  color: blue;
+}
+input[type=radio]:checked + label > .mynotification {
+  background-color: blue;
+  color: #fff;
+}
+
+input[id=tab-1]:checked ~ .myactive {
+  transform: translateX(0);
+  background-color: red;
+}
+
+input[id=tab-2]:checked ~ .myactive {
+  transform: translateX(100%);
+  background-color: yellow;
+}
+
+input[id=tab-3]:checked ~ .myactive {
+  transform: translateX(200%);
+  background-color: green;
+}
+input[id=tab-4]:checked ~ .myactive {
+  transform: translateX(300%);
+  background-color: blue;
+}
+
+.myactive {
+  position: absolute;
+  display: flex;
+  height:50px ;
+  
+  background-color: aqua;
+  border-radius: 1rem;
+  transition: .25s ease;
+  z-index: 1;
+}
+/*-------------*/
+.hero-image{
+  height:200px;
+  background: linear-gradient(rgba(0, 0, 0, .5),rgba(0, 0, 0, .5)), url("image/image4.jpg");
+  background-size: cover;
+}
+.dev-carousel-image {
+  background: linear-gradient(rgba(0, 0, 0, .5),rgba(0, 0, 0, .5));
+}
+.box {
+  background-color: aqua;
+  border:1px solid red;
+  box-sizing: border-box;
+}
+.my-text {
+  font-size: 1rem;
+}
+/*animasi ketikan*/
+/*
+.mytype p {
+  font-size: 1em;
+  display: inline-block;
+  letter-spacing: .1em;
+  
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  
+  border-right: 2px solid white;
+  
+  animation: 
+    type 3s steps(13) 1s forwards,
+    blink .5s steps(1) infinite;
+}
+*/
+/*animasi text berjalan*/
+.mytype {
+  width: 100%;
+  overflow: hidden;
+}
+.flow-text{
+  display: inline-block;
+  width: 100%;
+  font-size: 1em;
+  text-wrap: nowrap;
+  animation: flow 7.5s linear infinite;
+}
+
+
+.outer-box {
+  height: 90vw;
+}
+.inner-box {
+  width: 80vw;
+  height: 80vw;
+  background-color: gray;
+}
+.inner-circle{
+  width: 20vw;
+  height: 20vw;
+  background-color: gray;
+  bottom: -10vw;
+  right: -10vw;
+}
+/*
+
+@keyframes type {
+  to {
+    width: 1ch;
+  }
+}
+*/
+@keyframes flow {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/*
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+*/
+/*media query*/
+@media only screen and (min-width: 950px) {
+  .my-text {
+    font-size: 2rem;
+  }
+  .outer-box {
+    width: 45vw;
+    height: 45vw;
+  }
+  .inner-box{
+    width: 90%;
+    height: 90%;
+    margin: 0 0 0 0;
+  }
+  /*
+  .mytype p {
+    font-size: 2em;
+    border-right: 3px solid white;
+  }
+  */
+  .flow-text{
+    font-size: 2em;
+    animation: flow 9s linear infinite;
+  }
+  .hero-image {
+    height: 400px;
+  }
+}

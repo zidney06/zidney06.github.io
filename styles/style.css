@@ -1,0 +1,47 @@
+/*development classes*/
+* {
+  margin: 0;
+  padding: 0;
+}
+.borderedR {
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+@font-face {
+    font-family: 'fontSaya';
+    src: url('../myFonts/AlexBrush-Regular.ttf') format('truetype'),
+         url('../myFonts/Sacramento-Regular.ttf') format('truetype'),
+         url('../MondayFeelings-7BD2l.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*project style*/
+.my-font {
+  font-family: "fontSaya";
+}
+.jumbotron {
+  width: 100vw;
+  height: 200px;
+  background:linear-gradient(to right,#0F4C75,#1B262C)
+}
+div:has(img) img{
+  width: 100px;
+  height: 100px;
+  
+}
+.card img {
+  height:400px;
+}
+
+@media only screen and (min-width: 768px) {
+  .jumbotron {
+    height: 350px;
+  }
+  div:has(img) img {
+    width: 200px;
+    height: 200px;
+  }
+  .card img {
+    height: 400px;
+  }
+}
