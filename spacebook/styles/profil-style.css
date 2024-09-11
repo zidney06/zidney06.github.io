@@ -1,0 +1,77 @@
+.borderedR {
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+.borderedG {
+  border: 1px solid green;
+  box-sizing: border-box;
+}
+.mycontainer {
+  max-width: 500px;
+  margin: auto;
+}
+.jumbotron {
+  width: 100%;
+  height: 200px;
+  background-image: url("../images/semmelweis.jpeg");
+  background-position: center;
+}
+.tes {
+  bottom: -50px;
+}
+.profil {
+  width: 150px;
+  height: 150px;
+  margin-left: 20px;
+  background-image: url("../images/profil.png");
+  background-position: center;
+}
+.cam {
+  top: 30px;
+  width: 50px;
+  aspect-ratio: 1 / 1 ;
+}
+.create {
+  width: 90%;
+}
+.btn-group .mybtn-1 {
+  background-color: pink;
+  width: 100px;
+  height: 200px;
+}
+.btn-group .mybtn-2{
+  width: 10px;
+}
+.btn-trs {
+  border: none;
+}
+.profil-2 {
+  width:50px;
+  height: 50px;
+}
+.postingan div .status {
+  width: 250px;
+}
+.postingan .postingan-non-text button {
+  width: 50px;
+  height: 50px;
+}
+.f-profil {
+  width: 60px;
+  height: 60px;
+}
+.main-2 div .btn {
+  width: 47.5%;
+}
+.unggahan-list div .icon {
+  width: 75px;
+  aspect-ratio: 1;
+}
+
+#el2,#el3,#el1 {
+  display:none;
+}
+#el3 div {
+  display: flex;
+  justify-content: center;
+}

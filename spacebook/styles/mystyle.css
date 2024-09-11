@@ -1,0 +1,105 @@
+.borderedR {
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+.borderedG {
+  border:1px solid green;
+  box-sizing: border-box;
+}
+.borderedB {
+  border: 1px solid blue;
+  box-sizing: border-box;
+}
+/*style*/
+.mycontainer {
+  max-width: 500px;
+}
+section:has(.profil) img {
+  width: 55px;
+  height: 55px;
+}
+section:has(.profil) input {
+  height: 50px;
+  width: 300px;
+}
+.slide-container {
+  width: 100%;
+  overflow-x: scroll; /* Mengaktifkan pengguliran horizontal */
+  overflow-y: hidden; /* Matikan pengguliran vertikal */
+  display: flex;
+  flex-direction: row; /* Susun elemen anak secara horizontal */
+  white-space: nowrap; /* Mencegah elemen anak untuk membungkus ke baris baru */
+}
+.mycard, .card {
+  flex: 0 0 auto;
+  /* Pastikan elemen tidak mengecil dan tetap sesuai dengan lebar kontainer */
+}
+.mycard {
+  width: 100px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  background-image: linear-gradient(aqua,skyblue);
+}
+.mycard .music {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+.mycard .music i {
+  color: black;
+}
+.card {
+  width: 100px;
+  height: 200px;
+  border-radius: 10px;
+}
+.card .card-img-top {
+  width: 100%;
+  height: 50%;
+}
+.add {
+  position: relative;
+}
+.card .add .bulat {
+  width: 25px;
+  height: 25px;
+  background-color: deepskyblue;
+  display:block;
+  line-height: 25px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+}
+.card .add p {
+  margin-top: 75px;
+}
+.card .story {
+  width: 100%;
+  height: 100%;
+}
+.card:has(.story):after {
+  content: "Vila";
+  position:absolute;
+  bottom:10px;
+  left:5px;
+}
+.f-profil {
+  width: 60px;
+  height: 60px;
+}
+.saran-teman .card {
+  height: 250px;
+  width: 150px;
+}
+.saran-teman button {
+  bottom: 10px;
+}
+
+
+
