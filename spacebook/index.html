@@ -35,8 +35,20 @@
           <img src="images/profil.png" alt="" class="rounded-circle">
           </a>
         </div>
-        <form class="ms-3">
+        <form class="ms-3 d-flex">
           <input type="text" name="status" id="status" placeholder="apa mood anda..." autocomplete="off" class="form-control">
+          <button type="button" class="btn ms-1" onclick="buatPostingan()" id="btn">kirim</button>
+        </form>
+      </div>
+      <div class="container d-flex justify-content-center">
+        <button class="btn" onclick="tampilkan()">Unggah foto atau video</button>
+      </div>
+      <div class="overlay" id="overlay">
+        <button class="btn" onclick="tutup()"><i class="bi-arrow-left"></i></button>
+        <form>
+          <input type="file" name="myFile" id="myFile" class="form-control w-100">
+          <input type="text" name="text" id="penjelasan" class="form-control w-100" placeholder="tambahkan keteranga">
+          <button type="button" class="btn" onclick="konfirmasi()">oke</button>
         </form>
       </div>
       <div class="slide-container border mt-3 p-2">
@@ -63,7 +75,7 @@
         </div>
       </div>
     </section>
-    <main class="border mt-2">
+    <main class="border mt-2" id="container">
       <div class="postingan">
         <div class="border-bottom">
           <div class="container-fluid d-flex w-100 p-1 position-relative">
@@ -127,9 +139,7 @@
   </div>
 
   <script src="scripts/bootstrap.bundle.min.js"></script>
-  <script>
-
-  </script>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
